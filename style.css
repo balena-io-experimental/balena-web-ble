@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: #445;
+  text-align: center;
+  color: white;
+}
+a {
+  color: cadetblue;
+}
+h1,
+.btn {
+  margin: 1rem;
+}
+
+h1 {
+  position: absolute;
+}
+
+.btn {
+  background: cadetblue;
+  border-color: cadetblue;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.lamp {
+  width: 40%;
+  min-width: 325px;
+  max-width: 430px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.on,
+.rays {
+  display: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  font-size: 0.8rem;
+}
+
+#stats {
+  bottom: 5%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.hidden {
+  display: none;
+}
+
+#toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.btn-light {
+  display: inline-block;
+  font-size: 20px;
+  height: 30px;
+  width: 60px;
+  background: cadetblue;
+  border-radius: 1em;
+}
+
+.btn-light div {
+  height: 30px;
+  width: 30px;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+  transition: all 300ms;
+}
+
+.btn-light input:checked + div {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+#device-info {
+  margin: 1rem;
+}
+
+@media only screen and (min-width: 400px) {
+  body {
+    font-size: 20px;
+  }
+  #stats {
+    bottom: 15%;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "balena-ble-demo",
+  "version": "1.0.0",
+  "description": "A sample project to showcase Raspberry Pi BLE usage with balenaOS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "BLE"
+  ],
+  "author": "Rahul Thakoor <rahul@balena.io>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bleno": "*",
+    "systeminformation": "4.14.8",
+    "onoff": "4.1.3"
+  }
+}
