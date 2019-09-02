@@ -1,8 +1,6 @@
 const bleno = require("bleno");
-
 const DeviceInfoService = require("./utils/services/device-info-service");
 const GpioService = require("./utils/services/gpio-service");
-
 const deviceInfoService = new DeviceInfoService();
 const gpioService = new GpioService();
 

@@ -2,7 +2,6 @@ const util = require("util");
 const bleno = require("bleno");
 const Gpio = require("onoff").Gpio;
 const led = new Gpio(17, "out");
-
 const Descriptor = bleno.Descriptor;
 const Characteristic = bleno.Characteristic;
 
@@ -14,7 +13,7 @@ class LEDCharacteristic {
       descriptors: [
         new Descriptor({
           uuid: "2901",
-          value: "Turn LED on/off"
+          value: "Turn LED(GPIO17) on/off"
         })
       ]
     });

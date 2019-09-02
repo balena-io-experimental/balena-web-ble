@@ -3,118 +3,117 @@
   <meta charset="utf-8" />
   <title>BalenaBLE</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="ble-client.js"></script>
   <body>
     <h1>balenaBLE</h1>
 
-    <div class="connected">
-      <div class="lamp">
-        <?xml version="1.0" encoding="iso-8859-1"?>
-        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-        <svg
-          version="1.1"
-          id="Layer_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 512 512"
-          style="enable-background:new 0 0 512 512;"
-          xml:space="preserve"
-        >
-          <path
-            d="M255.962,132.741c-5.234,0-9.481-4.248-9.481-9.481V9.481c0-5.234,4.248-9.481,9.481-9.481s9.481,4.248,9.481,9.481v113.778
+    <div class="lamp">
+      <?xml version="1.0" encoding="iso-8859-1"?>
+      <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 512 512"
+        style="enable-background:new 0 0 512 512;"
+        xml:space="preserve"
+      >
+        <path
+          d="M255.962,132.741c-5.234,0-9.481-4.248-9.481-9.481V9.481c0-5.234,4.248-9.481,9.481-9.481s9.481,4.248,9.481,9.481v113.778
 	C265.443,128.493,261.196,132.741,255.962,132.741z"
-          />
-          <path
-            style="fill:#AD1457;"
-            d="M471.476,341.333H40.448c-6.334,0.275-11.681-4.636-11.956-10.97
+        />
+        <path
+          style="fill:#AD1457;"
+          d="M471.476,341.333H40.448c-6.334,0.275-11.681-4.636-11.956-10.97
 	c-0.161-3.859,1.621-7.538,4.75-9.794l191.621-138.145c2.076-1.47,4.561-2.266,7.111-2.276h47.976
 	c2.551,0.009,5.035,0.806,7.111,2.276l191.621,138.145c5.139,3.707,6.296,10.875,2.588,16.014
 	C479.014,339.712,475.335,341.495,471.476,341.333z"
-          />
-          <path
-            style="fill:#E91E63;"
-            d="M424.069,341.333H40.448c-6.334,0.275-11.681-4.636-11.956-10.97
+        />
+        <path
+          style="fill:#E91E63;"
+          d="M424.069,341.333H40.448c-6.334,0.275-11.681-4.636-11.956-10.97
 	c-0.161-3.859,1.621-7.538,4.75-9.794l191.621-138.145c2.076-1.47,4.561-2.266,7.111-2.276h0.569
 	c2.551,0.009,5.035,0.806,7.111,2.276l191.621,138.145c5.139,3.707,6.296,10.875,2.588,16.014
 	C431.606,339.712,427.927,341.495,424.069,341.333z"
-          />
-          <path
-            style="fill:#AD1457;"
-            d="M284.406,151.704v28.444h-56.889v-28.444c0-15.711,12.734-28.444,28.444-28.444
+        />
+        <path
+          style="fill:#AD1457;"
+          d="M284.406,151.704v28.444h-56.889v-28.444c0-15.711,12.734-28.444,28.444-28.444
 	S284.406,135.993,284.406,151.704z"
-          />
-          <path
-            style="fill:#E91E63;"
-            d="M255.962,151.704v28.444h-28.444v-28.444c-0.009-10.164,5.414-19.57,14.222-24.652
+        />
+        <path
+          style="fill:#E91E63;"
+          d="M255.962,151.704v28.444h-28.444v-28.444c-0.009-10.164,5.414-19.57,14.222-24.652
 	C250.548,132.134,255.971,141.54,255.962,151.704z"
-          />
-          <path
-            d="M471.476,350.815H40.448c-9.33,0.18-17.664-5.803-20.48-14.696c-2.854-8.59,0.265-18.034,7.68-23.23l191.621-138.145
+        />
+        <path
+          d="M471.476,350.815H40.448c-9.33,0.18-17.664-5.803-20.48-14.696c-2.854-8.59,0.265-18.034,7.68-23.23l191.621-138.145
 	c3.698-2.655,8.145-4.087,12.705-4.077h47.881c4.561-0.009,9.007,1.422,12.705,4.077l191.716,138.145
 	c7.443,5.167,10.61,14.62,7.775,23.23C489.225,345.05,480.844,351.042,471.476,350.815z M231.974,189.63
 	c-0.569-0.009-1.138,0.161-1.612,0.474L38.741,328.344c-0.721,0.379-1.043,1.233-0.759,1.991c0.341,0.996,1.327,1.621,2.37,1.517
 	h431.123c1.043,0.104,2.029-0.521,2.37-1.517c0.284-0.759-0.038-1.612-0.759-1.991l-191.526-138.24
 	c-0.474-0.313-1.043-0.484-1.612-0.474L231.974,189.63L231.974,189.63z"
-          />
+        />
 
-          <path
-            class="rays"
-            style="fill:#FDD834;"
-            d="M284.406,341.333v28.444c0,15.711-12.734,28.444-28.444,28.444s-28.444-12.734-28.444-28.444v-28.444
+        <path
+          class="rays"
+          style="fill:#FDD834;"
+          d="M284.406,341.333v28.444c0,15.711-12.734,28.444-28.444,28.444s-28.444-12.734-28.444-28.444v-28.444
 	H284.406z"
-          />
-          <path
-            class="rays"
-            style="fill:#FFEB3A;"
-            d="M255.962,341.333v28.444c0.009,10.164-5.414,19.57-14.222,24.652
+        />
+        <path
+          class="rays"
+          style="fill:#FFEB3A;"
+          d="M255.962,341.333v28.444c0.009,10.164-5.414,19.57-14.222,24.652
 	c-8.808-5.082-14.232-14.488-14.222-24.652v-28.444H255.962z"
-          />
-          <path
-            d="M255.962,407.704c-20.945,0-37.926-16.981-37.926-37.926v-28.444c0-5.234,4.248-9.481,9.481-9.481h56.889
+        />
+        <path
+          d="M255.962,407.704c-20.945,0-37.926-16.981-37.926-37.926v-28.444c0-5.234,4.248-9.481,9.481-9.481h56.889
 	c5.234,0,9.481,4.248,9.481,9.481v28.444C293.888,390.722,276.906,407.704,255.962,407.704z M236.999,350.815v18.963
 	c0,10.477,8.486,18.963,18.963,18.963s18.963-8.486,18.963-18.963v-18.963H236.999z"
-          />
-          <path
-            class="rays"
-            d="M123.221,502.519c-5.234,0.028-9.51-4.191-9.538-9.425c-0.019-2.551,0.996-4.997,2.807-6.789l75.852-75.852
+        />
+        <path
+          class="rays"
+          d="M123.221,502.519c-5.234,0.028-9.51-4.191-9.538-9.425c-0.019-2.551,0.996-4.997,2.807-6.789l75.852-75.852
 	c3.973-3.404,9.965-2.939,13.369,1.034c3.044,3.546,3.044,8.789,0,12.335l-75.852,75.852
 	C128.104,501.457,125.724,502.481,123.221,502.519z"
-          />
-          <path
-            class="rays"
-            d="M388.703,502.519c-2.522,0.019-4.94-0.977-6.732-2.75l-75.852-75.852c-3.404-3.973-2.939-9.965,1.033-13.369
+        />
+        <path
+          class="rays"
+          d="M388.703,502.519c-2.522,0.019-4.94-0.977-6.732-2.75l-75.852-75.852c-3.404-3.973-2.939-9.965,1.033-13.369
 	c3.546-3.044,8.789-3.044,12.335,0L395.34,486.4c3.669,3.736,3.603,9.737-0.133,13.407
 	C393.472,501.513,391.139,502.481,388.703,502.519z"
-          />
-          <path
-            class="rays"
-            d="M189.591,388.741h-66.37c-5.234,0-9.481-4.248-9.481-9.481c0-5.234,4.248-9.482,9.481-9.482h66.37
+        />
+        <path
+          class="rays"
+          d="M189.591,388.741h-66.37c-5.234,0-9.481-4.248-9.481-9.481c0-5.234,4.248-9.482,9.481-9.482h66.37
 	c5.234,0,9.481,4.248,9.481,9.482C199.073,384.493,194.825,388.741,189.591,388.741z"
-          />
-          <path
-            class="rays"
-            d="M379.221,388.741h-66.37c-5.234,0-9.481-4.248-9.481-9.481c0-5.234,4.248-9.482,9.481-9.482h66.37
+        />
+        <path
+          class="rays"
+          d="M379.221,388.741h-66.37c-5.234,0-9.481-4.248-9.481-9.481c0-5.234,4.248-9.482,9.481-9.482h66.37
 	c5.234,0,9.481,4.248,9.481,9.482C388.703,384.493,384.455,388.741,379.221,388.741z"
-          />
-          <path
-            class="rays"
-            d="M255.962,512c-5.234,0-9.481-4.248-9.481-9.481v-66.37c0-5.234,4.248-9.482,9.481-9.482s9.481,4.248,9.481,9.482v66.37
+        />
+        <path
+          class="rays"
+          d="M255.962,512c-5.234,0-9.481-4.248-9.481-9.481v-66.37c0-5.234,4.248-9.482,9.481-9.482s9.481,4.248,9.481,9.482v66.37
 	C265.443,507.752,261.196,512,255.962,512z"
-          />
-          <path
-            d="M284.406,189.63h-56.889c-5.234,0-9.481-4.248-9.481-9.481v-28.444c0-20.945,16.981-37.926,37.926-37.926
+        />
+        <path
+          d="M284.406,189.63h-56.889c-5.234,0-9.481-4.248-9.481-9.481v-28.444c0-20.945,16.981-37.926,37.926-37.926
 	s37.926,16.981,37.926,37.926v28.444C293.888,185.382,289.64,189.63,284.406,189.63z M236.999,170.667h37.926v-18.963
 	c0-10.477-8.486-18.963-18.963-18.963s-18.963,8.486-18.963,18.963V170.667z"
-          />
-          <path
-            d="M274.925,227.556h-37.926c-5.234,0-9.481-4.248-9.481-9.481s4.248-9.481,9.481-9.481h37.926
+        />
+        <path
+          d="M274.925,227.556h-37.926c-5.234,0-9.481-4.248-9.481-9.481s4.248-9.481,9.481-9.481h37.926
 	c5.234,0,9.481,4.248,9.481,9.481S280.159,227.556,274.925,227.556z"
-          />
-        </svg>
-      </div>
-      <!-- svg ends -->
+        />
+      </svg>
     </div>
+    <!-- svg ends -->
 
     <div id="stats">
       <div id="not-connected">
@@ -128,7 +127,9 @@
         </label>
         <div id="device-info">
           <p>CPU: <span id="vendor"></span>@<span id="speed"></span>GHz</p>
-          <button id="btn-disconnect" class="btn">Connect</button>
+          <button id="btn-disconnect" onclick="disconnect()" class="btn">
+            Disconnect
+          </button>
         </div>
       </div>
     </div>
@@ -149,6 +150,7 @@
   </body>
 </html>
 <script>
+  /* updates UI when LED is turned on/off */
   function handleLedStatusChanged(event) {
     let status = event.target.value.getUint8(0);
     rays = document.getElementsByClassName("rays");
@@ -164,104 +166,22 @@
     }
   }
 
+  /* helper function to decode message sent from peripheral */
   function decode(buf) {
     let dec = new TextDecoder("utf-8");
     return dec.decode(buf);
   }
 
-  class BalenaBLE {
-    constructor() {
-      this.device = null;
-      this.led = null;
-      this.cpuVendor = null;
-      this.cpuSpeed = null;
-      this.onDisconnected = this.onDisconnected.bind(this);
-    }
-
-    async setLedCharacteristic() {
-      const service = await this.device.gatt.getPrimaryService(0xfff0);
-      const characteristic = await service.getCharacteristic(
-        "d7e84cb2-ff37-4afc-9ed8-5577aeb8454c"
-      );
-      this.led = characteristic;
-
-      this.led.addEventListener(
-        "characteristicvaluechanged",
-        handleLedStatusChanged
-      );
-    }
-
-    async setDeviceCharacteristic() {
-      const service = await this.device.gatt.getPrimaryService(0xfff1);
-      const vendor = await service.getCharacteristic(
-        "d7e84cb2-ff37-4afc-9ed8-5577aeb84542"
-      );
-      this.cpuVendor = vendor;
-
-      const speed = await service.getCharacteristic(
-        "d7e84cb2-ff37-4afc-9ed8-5577aeb84541"
-      );
-      this.cpuSpeed = speed;
-    }
-
-    async request() {
-      let options = {
-        filters: [
-          {
-            name: "BalenaBLE"
-          }
-        ],
-        optionalServices: [0xfff0, 0xfff1]
-      };
-      this.device = await navigator.bluetooth.requestDevice(options);
-      if (!this.device) {
-        throw "No device selected";
-      }
-      this.device.addEventListener(
-        "gattserverdisconnected",
-        this.onDisconnected
-      );
-    }
-
-    async connect() {
-      if (!this.device) {
-        return Promise.reject("Device is not connected.");
-      }
-      await this.device.gatt.connect();
-    }
-
-    async readLed() {
-      await this.led.readValue();
-    }
-
-    async readCPUVendor() {
-      let vendor = await this.cpuVendor.readValue();
-      return decode(vendor);
-    }
-    async readCPUSpeed() {
-      let speed = await this.cpuSpeed.readValue();
-      return decode(speed);
-    }
-
-    async writeLed(data) {
-      await this.led.writeValue(Uint8Array.of(data));
-      await this.readLed();
-    }
-
-    disconnect() {
-      if (!this.device) {
-        return Promise.reject("Device is not connected.");
-      }
-      return this.device.gatt.disconnect();
-    }
-
-    onDisconnected() {
-      console.log("Device is disconnected.");
-    }
+  /* Disconnect from peripheral and update UI */
+  function disconnect() {
+    balenaBLE.disconnect();
+    document.getElementById("not-connected").classList.remove("hidden");
+    document.getElementById("container").classList.add("hidden");
   }
 
   var balenaBLE = new BalenaBLE();
 
+  /* connect to peripheral, load data and add event listeners */
   document
     .getElementById("btn-connect")
     .addEventListener("click", async event => {

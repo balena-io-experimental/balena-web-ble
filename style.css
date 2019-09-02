@@ -32,6 +32,9 @@ h1 {
   font-size: 1rem;
   border-radius: 4px;
 }
+#btn-disconnect {
+  background: none;
+}
 
 .lamp {
   width: 40%;
@@ -56,7 +59,7 @@ footer {
 }
 
 #stats {
-  bottom: 5%;
+  bottom: 15%;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
@@ -98,11 +101,24 @@ footer {
   margin: 1rem;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-device-width: 500px) {
   body {
-    font-size: 20px;
+    font-size: 40px;
   }
+  .lamp {
+    width: 80%;
+    max-width: 80%;
+  }
+
+  #not-connected > button {
+    font-size: 3rem;
+    border-radius: 10px;
+    padding: 20px 40px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
   #stats {
-    bottom: 15%;
+    bottom: 5%;
   }
 }
