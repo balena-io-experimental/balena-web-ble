@@ -40,7 +40,7 @@ class BalenaBLE {
     let options = {
       filters: [
         {
-          name: "BalenaBLE"
+          name: "balenaBLE"
         }
       ],
       optionalServices: [0xfff0, 0xfff1]
