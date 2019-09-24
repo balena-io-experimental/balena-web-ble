@@ -13,8 +13,10 @@ class BalenaBLE {
     const characteristic = await service.getCharacteristic(
       "d7e84cb2-ff37-4afc-9ed8-5577aeb8454c"
     );
-    characteristic.startNotifications();
+    // characteristic.startNotifications();
     this.led = characteristic;
+
+    await this.led.startNotifications();
 
     this.led.addEventListener(
       "characteristicvaluechanged",
