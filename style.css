@@ -101,7 +101,7 @@ footer {
   margin: 1rem;
 }
 
-@media only screen and (max-device-width: 500px) {
+@media only screen and (max-device-width: 600px) {
   body {
     font-size: 40px;
   }
