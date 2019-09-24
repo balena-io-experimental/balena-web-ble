@@ -71,11 +71,6 @@ class LEDCharacteristic {
   }
 }
 
-process.on("SIGINT", () => {
-  led.unexport();
-  button.unexport();
-});
-
 util.inherits(LEDCharacteristic, Characteristic);
 
 module.exports = LEDCharacteristic;
