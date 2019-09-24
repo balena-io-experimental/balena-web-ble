@@ -158,11 +158,14 @@
     if (status) {
       for (let ray of rays) {
         ray.style.setProperty("display", "block");
+        let toggle = document.getElementById("toggle");
       }
+      toggle.checked = true;
     } else {
       for (let ray of rays) {
         ray.style.setProperty("display", "none");
       }
+      toggle.checked = false;
     }
   }
 
@@ -180,6 +183,7 @@
   }
 
   var balenaBLE = new BalenaBLE();
+  var toggle = document.getElementById("toggle");
 
   /* connect to peripheral, load data and add event listeners */
   document
@@ -198,7 +202,6 @@
           "speed"
         ).textContent = await balenaBLE.readCPUSpeed();
 
-        let toggle = document.getElementById("toggle");
         toggle.addEventListener("change", e => {
           if (e.target.checked) {
             balenaBLE.writeLed(1);
